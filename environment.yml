@@ -10,6 +10,4 @@ dependencies:
   - seaborn
   - sympy
   - ipykernel
-  - pip
-  pip:
-    - openpyxl
+  - openpyxl
