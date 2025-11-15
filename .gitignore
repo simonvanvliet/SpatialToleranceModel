@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+2_gradient_inference_legacy/
+
 # C extensions
 *.so
 
