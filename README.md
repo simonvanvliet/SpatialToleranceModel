@@ -66,9 +66,23 @@ Outputs are stored in the subfolders `data` (intermediate data files) and `figur
    - Output:
      - Inferred and fitted concentrations profiles: `./2_gradient_inference/data/2_[hqno/rhl]_concentration_profiles.csv`
      - Diffusion model fit parameters: `./2_gradient_inference/data/2_[hqno/rhl]_diffusion_model_fits.csv`
+3. `3_plot_concentrations`: Creates dual-axis plots comparing HQNO and RHL concentration gradients with percentile bands.
+   - Input: Concentration profiles from previous notebook: `./2_gradient_inference/data/2_[hqno/rhl]_concentration_profiles.csv`
+   - Output: Combined concentration gradient figures: `./2_gradient_inference/figures/3_hqno_rhl_dual_axis_fitted_concentration.pdf`
 
+### 3_batch_survival
 
-### 3_1D_model_predictions
+Notebooks to fit survival model to batch culture antibiotic assay data.
+
+1. `1_fit_batch_survival`: Fits linear logit model to bacterial survival data as function of RHL and HQNO concentrations.
+   - Input: Survival assay data: `./datafiles/HQNO_RHL_Survival.csv`
+   - Output: Model parameters: `./3_batch_survival/data/survival_model_parameters.json`
+
+### 4_1D_model_predictions
 
 Notebooks containing 1D Reaction - Diffusion model predictions.
+
+1. `1_estimate_flowchannel_conc`: Uses analytical 1D reaction-diffusion model to calculate exogenous concentration needed in PA flow channel to restore PA-WT like gradients in PA double mutant conditions.
+   - Input: Diffusion model fit parameters: `./2_gradient_inference/data/2_[hqno/rhl]_diffusion_model_fits.csv`
+   - Output: None
 

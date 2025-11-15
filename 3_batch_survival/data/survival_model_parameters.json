@@ -1,0 +1,12 @@
+{
+  "model": "Linear-in-RHL-and-HQNO Logit",
+  "parameters": {
+    "m_rhl": -0.4266164339212522,
+    "m_hqno": 207.08478532579463,
+    "b": -7.382904446166108
+  },
+  "filters": {
+    "timepoint_h": 2,
+    "hqno_max": 0.05
+  }
+}
