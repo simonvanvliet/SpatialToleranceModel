@@ -6,7 +6,7 @@ By:
 
 Model conceptualized and analyzed by Giulia Bottacin, Benjamin Raach, and Simon van Vliet.
 
-Model developed and implemented by Benjamin Raach.
+Model developed and implemented by Benjamin Raach and Simon van Vliet.
 
 ## Installation
 
@@ -62,7 +62,7 @@ Outputs are stored in the subfolders `data` (intermediate data files) and `figur
    - Input: microscopy fluorescent data: `./datafiles/[hqno/rhl]_gradient_microscopy.csv`
    - Output: Binned data: `./2_gradient_inference/data/1_[hqno/rhl]_fluor_gradient_binned.csv`  
 2. `2_[hqno/rhl]_concentration_estimate`: Converts fluorescent gradients in estimated concentration gradients and fits diffusion model
-   - Input: output from previous notebook: `./2_gradient_inference/data/1_[hqno/rhl]_fluor_gradient_binned.csv`  
+   - Input: binned fluorescence values from previous notebook: `./2_gradient_inference/data/1_[hqno/rhl]_fluor_gradient_binned.csv`  
    - Output:
      - Inferred and fitted concentrations profiles: `./2_gradient_inference/data/2_[hqno/rhl]_concentration_profiles.csv`
      - Diffusion model fit parameters: `./2_gradient_inference/data/2_[hqno/rhl]_diffusion_model_fits.csv`
