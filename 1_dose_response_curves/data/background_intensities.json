@@ -1,0 +1,14 @@
+{
+  "RHL": {
+    "file_name": "rhl_calibration_microscopy.csv",
+    "channel": "intensity_raw_mcherry",
+    "condition": "RHL_0_\u00b5g",
+    "bg_value": 1735.4466184251446
+  },
+  "HQNO": {
+    "file_name": "hqno_calibration_microscopy.csv",
+    "channel": "intensity_raw_gfp",
+    "condition": "HQNO_0_ng",
+    "bg_value": 161.32959601096206
+  }
+}
