@@ -2,11 +2,11 @@
   "hqno_max_40": {
     "model": "Linear-in-RHL-and-HQNO Logit",
     "parameters": {
-      "m_rhl": -0.5618343680608611,
-      "m_hqno": 0.2791859572978512,
-      "b": -5.2964914029045875
+      "m_rhl": -0.426616432840796,
+      "m_hqno": 0.20708478570773975,
+      "b": -7.382904466551102
     },
-    "r_squared": 0.739728252066485,
+    "r_squared": 0.7090352197471839,
     "units": {
       "Rhamnolipids": "\u00b5g/ml",
       "HQNO": "ng/ml"
@@ -17,11 +17,11 @@
   "hqno_max_60": {
     "model": "Linear-in-RHL-and-HQNO Logit",
     "parameters": {
-      "m_rhl": -0.6310931223573906,
-      "m_hqno": 0.2735352745348468,
-      "b": -4.707341789085735
+      "m_rhl": -0.38485115388085545,
+      "m_hqno": 0.163743518743729,
+      "b": -7.104347195763431
     },
-    "r_squared": 0.8074051419464765,
+    "r_squared": 0.7516618079674141,
     "units": {
       "Rhamnolipids": "\u00b5g/ml",
       "HQNO": "ng/ml"
@@ -32,11 +32,11 @@
   "hqno_max_80": {
     "model": "Linear-in-RHL-and-HQNO Logit",
     "parameters": {
-      "m_rhl": -0.646158979574263,
-      "m_hqno": 0.23742025680334644,
-      "b": -3.8857772864657307
+      "m_rhl": -0.3332803638032509,
+      "m_hqno": 0.12855605102649645,
+      "b": -6.829600573174739
     },
-    "r_squared": 0.8294866927628259,
+    "r_squared": 0.7424242361526505,
     "units": {
       "Rhamnolipids": "\u00b5g/ml",
       "HQNO": "ng/ml"
