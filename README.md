@@ -30,6 +30,13 @@ conda activate diffmodel_env
 
 This folder contains the experimental data files
 
+### 0_plot_functions
+
+Contains Python scripts for generating publication-quality figures.
+
+1. `plot_publication_figures.py`: Functions for creating standardized plots across all notebooks.
+
+
 ### 1_dose_response_curves
 
 Notebooks to construct dose response curves of RHL and HQNO fluorescent reporters.
@@ -38,8 +45,11 @@ Substeps are contained in jupyter notebooks, with sequential numbers [#], with o
 
 Outputs are stored in the subfolders `data` (intermediate data files) and `figures` (manuscript figures).
 
-Fluorescent intensities of reporters were measured in high throughput for many concentrations with FACS, and at low throughput on a few concentrations in microfluidics. These were combined to fit dose response curves, in two steps:
+Fluorescent intensities of reporters were measured in high throughput for many concentrations with FACS, and at low throughput on a few concentrations in microfluidics. These were combined to fit dose response curves, in three steps:
 
+0. `0_get_background.ipynb`: Determines background fluorescence intensities from control samples.
+   - Input: Calibration microscopy data files: `./datafiles/[hqno/rhl]_calibration_microscopy.csv`
+   - Output: Background intensities: `./1_dose_response_curves/data/background_intensities.json`
 1. `1_[hqno/rhl]_calibrate_facs_microscope.ipynb`: Converts FACS fluorescent intensity to microscope intensities, using linear regression of FACS and microscopy intensities measured at same inducer concentration.
    - Input:
      - facs data files: `./datafiles/[hqno/rhl]_calibration_facs.csv`
@@ -78,11 +88,47 @@ Notebooks to fit survival model to batch culture antibiotic assay data.
    - Input: Survival assay data: `./datafiles/HQNO_RHL_Survival.csv`
    - Output: Model parameters: `./3_batch_survival/data/survival_model_parameters.json`
 
-### 4_1D_model_predictions
+### 4_1D_model
 
 Notebooks containing 1D Reaction - Diffusion model predictions.
 
 1. `1_estimate_flowchannel_conc`: Uses analytical 1D reaction-diffusion model to calculate exogenous concentration needed in PA flow channel to restore PA-WT like gradients in PA double mutant conditions.
    - Input: Diffusion model fit parameters: `./2_gradient_inference/data/2_[hqno/rhl]_diffusion_model_fits.csv`
    - Output: None
+2. `2_predict_survival`: Predicts survival in microfluidic channel using 1D reaction-diffusion model.
+   - Input: 
+     - Diffusion model fit parameters: `./2_gradient_inference/data/2_[hqno/rhl]_diffusion_model_fits.csv`
+     - Survival model parameters: `./3_batch_survival/data/survival_model_parameters.json`
+   - Output: Predicted survival profiles and figures
+3. `3_estimate_production_rate`: Estimates production rates from experimental concentration profiles.
+   - Input:
+     - Concentration profiles: `./2_gradient_inference/data/2_[hqno/rhl]_concentration_profiles.csv`
+     - Diffusion model fits: `./2_gradient_inference/data/2_[hqno/rhl]_diffusion_model_fits.csv`
+   - Output: Estimated model parameters: `./4_1D_model/data/3_full_model_parameters.csv`
+4. `4_explore_parameter_space`: Explores how survival predictions vary across different model parameter values.
+   - Input: Model parameters: `./4_1D_model/data/3_full_model_parameters.csv`
+   - Output: Parameter space exploration figures
+
+### 5_2D_model
+
+Notebooks containing 2D Reaction - Diffusion model simulations.
+
+1. `1_2d_model_chamber`: 2D reaction-diffusion model simulating chamber dynamics with checkerboard or striped patterns.
+   - Input:
+     - Survival model parameters: `./3_batch_survival/data/survival_model_parameters.json`
+     - Model parameters: `./4_1D_model/data/3_full_model_parameters.csv`
+   - Output: Cluster size vs survival data: `./5_2D_model/data/cluster_size_vs_survival.csv`
+2. `2_2d_model_colony_open`: 2D reaction-diffusion model simulating colony dynamics with open boundaries.
+   - Input:
+     - Survival model parameters: `./3_batch_survival/data/survival_model_parameters.json`
+     - Model parameters: `./4_1D_model/data/3_full_model_parameters.csv`
+   - Output: 2D model predictions and figures
+
+### 6_Pattern_Analysis
+
+Notebooks for analyzing spatial patterns in experimental data.
+
+1. `1_test_segregation_score`: Tests and validates segregation scores for quantifying spatial patterns.
+   - Input: Pattern data
+   - Output: Segregation score analysis and validation figures
 
