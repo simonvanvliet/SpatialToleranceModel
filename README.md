@@ -109,26 +109,20 @@ Notebooks containing 1D Reaction - Diffusion model predictions.
    - Input: Model parameters: `./4_1D_model/data/3_full_model_parameters.csv`
    - Output: Parameter space exploration figures
 
-### 5_2D_model
+### 5_mixed_chambers
 
-Notebooks containing 2D Reaction - Diffusion model simulations.
+Notebooks for analyzing spatial segregation patterns and predicting survival in mixed chambers.
 
-1. `1_2d_model_chamber`: 2D reaction-diffusion model simulating chamber dynamics with checkerboard or striped patterns.
+1. `1_test_segregation_score`: Tests and validates the multiscale segregation score (MSSL) using synthetic checkerboard and stripe patterns.
+   - Input: None (generates synthetic patterns)
+   - Output: Validation of segregation score methodology with example patterns
+2. `2_predict_mixed_chambers`: 2D reaction-diffusion model predicting survival for different spatial arrangements (chessboard and stripe patterns) in mixed chambers.
    - Input:
      - Survival model parameters: `./3_batch_survival/data/survival_model_parameters.json`
      - Model parameters: `./4_1D_model/data/3_full_model_parameters.csv`
-   - Output: Cluster size vs survival data: `./5_2D_model/data/cluster_size_vs_survival.csv`
-2. `2_2d_model_colony_open`: 2D reaction-diffusion model simulating colony dynamics with open boundaries.
-   - Input:
-     - Survival model parameters: `./3_batch_survival/data/survival_model_parameters.json`
-     - Model parameters: `./4_1D_model/data/3_full_model_parameters.csv`
-   - Output: 2D model predictions and figures
+   - Output: Survival predictions vs cluster size: `./5_mixed_chambers/data/cluster_size_vs_survival.csv`
+3. `4_analyze_mixed_chambers`: Analyzes experimental mixed chamber data, calculates segregation scores, and correlates with survival.
+   - Input: Mixed chamber experimental data: `./datafiles/mixed_chamber_tolerance.csv`
+   - Output: Segregation-survival correlation analysis and figures
 
-### 6_Pattern_Analysis
-
-Notebooks for analyzing spatial patterns in experimental data.
-
-1. `1_test_segregation_score`: Tests and validates segregation scores for quantifying spatial patterns.
-   - Input: Pattern data
-   - Output: Segregation score analysis and validation figures
 
