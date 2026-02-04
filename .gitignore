@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#system
+.DS_Store 
+.vs_code/
+
 #output
 *.pdf
 
