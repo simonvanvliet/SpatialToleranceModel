@@ -1,8 +1,6 @@
 # Spatial Tolerance Model
 
-Model accompanying the paper:
-
-By:
+Model accompanying the paper: Opposing Range-Dependent Interactions Create Complex Spatial Patterns of Antibiotic Tolerance in Multispecies Biofilms
 
 Model conceptualized and analyzed by Giulia Bottacin, Benjamin Raach, and Simon van Vliet.
 
