@@ -9,6 +9,12 @@ Model conceptualized and analyzed by Giulia Bottacin, Benjamin Raach, and Simon 
 
 Model developed and implemented by Benjamin Raach and Simon van Vliet.
 
+## Related resources
+
+- Preprint: [bioRxiv](https://doi.org/10.64898/2026.02.04.703747)
+- A complementary repository with data analysis scripts is available on [GitHub](https://github.com/simonvanvliet/Spatial-Tolerance-Figure-Data-and-Code/)
+- Raw data is available on BioImageArchive.
+
 ## Installation
 
 To set up the required Python environment, use the provided `environment.yml` file with conda:
