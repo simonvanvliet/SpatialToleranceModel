@@ -1,6 +1,9 @@
 # Spatial Tolerance Model
 
-Model accompanying the paper: Opposing Range-Dependent Interactions Create Complex Spatial Patterns of Antibiotic Tolerance in Multispecies Biofilms
+Model accompanying the paper:
+
+Opposing range-dependent interactions create complex spatial patterns of antibiotic tolerance in multispecies biofilms.
+Bottacin G, Raach B, Fröhlich L, Künnecke J, Kaczmarczyk A, Tejada-Arranz A, Ugolini GS, Stocker R, Jenal U, Bumann D, Dittrich PS, Schubert OT, van Vliet S. PNAS (2026)
 
 Model conceptualized and analyzed by Giulia Bottacin, Benjamin Raach, and Simon van Vliet.
 
@@ -122,5 +125,3 @@ Notebooks for analyzing spatial segregation patterns and predicting survival in 
 3. `4_analyze_mixed_chambers`: Analyzes experimental mixed chamber data, calculates segregation scores, and correlates with survival.
    - Input: Mixed chamber experimental data: `./datafiles/mixed_chamber_tolerance.csv`
    - Output: Segregation-survival correlation analysis and figures
-
-
