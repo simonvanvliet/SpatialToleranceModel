@@ -12,7 +12,7 @@
       "HQNO": "ng/ml"
     },
     "hqno_max_ng_ml": 40,
-    "time_point_h": 2
+    "time_point_h": 3
   },
   "hqno_max_60": {
     "model": "Linear-in-RHL-and-HQNO Logit",
@@ -27,7 +27,7 @@
       "HQNO": "ng/ml"
     },
     "hqno_max_ng_ml": 60,
-    "time_point_h": 2
+    "time_point_h": 3
   },
   "hqno_max_80": {
     "model": "Linear-in-RHL-and-HQNO Logit",
@@ -42,6 +42,6 @@
       "HQNO": "ng/ml"
     },
     "hqno_max_ng_ml": 80,
-    "time_point_h": 2
+    "time_point_h": 3
   }
 }
