@@ -9,6 +9,7 @@ __pycache__/
 
 #output
 *.pdf
+*_talk_*
 
 # legacy code
 legacy/
